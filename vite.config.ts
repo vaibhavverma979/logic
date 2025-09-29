@@ -5,6 +5,8 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
+  base: './', // CRITICAL: This ensures resource links are relative
+  plugins: [react()],
   server: {
     host: "0.0.0.0",
     port: 5000,
